@@ -45,9 +45,7 @@ Remove-Item -Path "HKLM:\SOFTWARE\Microsoft\Windows Defender\Scan" -Recurse -For
 Remove-Item -Path "HKLM:\SOFTWARE\Microsoft\Windows Defender\Features" -Recurse -Force
 
 Write-Host "Windows Defender has been completely disabled. Please restart your computer."
-```
 
-```
 # WARNING: This is irreversible!
 Disable-WindowsOptionalFeature -Online -FeatureName "Windows-Defender" -NoRestart
 Remove-WindowsCapability -Online -Name "Windows.Defender~~~~0.0.1.0"
